@@ -4,7 +4,7 @@ export const TXNURL = 'https://mumbai.polygonscan.com/tx/';
 export const RXSAMT = 1;
 export const BASECOIN = 'MATIC';
 export const TOKENNAME = 'Rabbit Eggs Pro NFT';
-export const NFTIMAGE ='https://bafkreihnnewq56w4n66gfflp5v2y23me6vsnf6iw5uv2jpyhpjsr6tinoq.ipfs.nftstorage.link/';
+export const NFTIMAGE ='https://bafkreid2mxmwwmldbkocdx6tkg4hkgowgv5tkmmxv432y5aq53wn3dnl4a.ipfs.nftstorage.link/';
 
 //Smart Contract Links
 export const DSTATECT = 'https://mumbai.polygonscan.com/address/'.concat(CONTADDRESS);
