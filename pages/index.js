@@ -306,7 +306,7 @@ export default function Home() {
                                     e.preventDefault();
                                     gotouri(BSCTESTNET);
                                   }}
-          >BSCTestnet</button>
+          >Faucet</button>
           </div>
         { !pizzadice && (<h3>Rabbit Eggs NFT Platform</h3>)}
 

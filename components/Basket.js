@@ -21,10 +21,6 @@ export default function Basket(props) {
     toast({ type, message, action });
   }, []);
 
-  const copyToken = async () => {
-    navigator.clipboard.writeText(TOKENADDRESS);
-    notify("success","Address Copied! Please Import token into MetaMask ", GUIDE);
-   }
 
 
    const callCont = async (totalPrize) => {
@@ -88,9 +84,9 @@ export default function Basket(props) {
   return (
     <div className={styles.block}>
       <div>
-      <div className={styles.lineqty}></div>
+      {/* <div className={styles.lineqty}></div> */}
         {cartItems.map((item) => (<span key={item.id}>
-          <div className={styles.brow}>  <center>
+          <div className={styles.brow1}>  <center>
             <div className={styles.bcolumn}>
             {totalPrice.toFixed(3)} 
             </div>
@@ -109,47 +105,7 @@ export default function Basket(props) {
 
         {cartItems.length !== 0 && (
           <>
-              {/* <div className={styles.menulinef} ><button
-                              onClick={(e) => {
-                                e.preventDefault();
-                                copyToken();
-                              }
-                            }
-              >Copy Token Address</button></div> */}
-             
-              
-             <div className={styles.brow}>
-                <span className={styles.lbcolumn}>
-                  Token Address
-                </span>
-                <span className={styles.rbcolumn}>
-                    <button className={styles.invisbut}
-                         onClick={(e) => {
-                          e.preventDefault();
-                          copyToken();
-                        }
-                      }
-                    >{TOKENADDRESS.substr(0,10)}</button>
-                </span>
-              </div>
-
-              <div className={styles.brow}>
-                <span className={styles.lbcolumn}>
-                  Token Standard
-                </span>
-                <span className={styles.rbcolumn}>
-                  ERC-721
-                </span>
-              </div>
-              <div className={styles.brow}>
-                <span className={styles.lbcolumn}>
-                  Blockchain
-                </span>
-                <span className={styles.rbcolumn}>
-                  Polygon
-                </span>
-              </div>
-
+          <div className={styles.infi}>Copy Token Address and Import</div>
               <div>
               {isConnected && (<button className={styles.paybutton} 
                 onClick={(e) => {

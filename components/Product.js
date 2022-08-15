@@ -15,6 +15,11 @@ export default function Product(props) {
     toast({ type, message, action });
   }, []);
 
+  const copyToken = async () => {
+    navigator.clipboard.writeText(TOKENADDRESS);
+    notify("success","Address Copied! Please Import token into MetaMask ", GUIDE);
+   }
+
   const gotourl = async (urls) => {
     window.open(urls, '_blank').focus();
    }
@@ -65,7 +70,7 @@ export default function Product(props) {
   return (
     <span  className={styles.card}>
 
-    <label>Mint</label>
+    {/* <label>Mint 2 Earn</label> */}
     <div>
 
         {true && (<button  title="Guide" className={styles.refreshbutton} 
@@ -107,7 +112,7 @@ export default function Product(props) {
       Polygon Testnet 
       </div>
       <div className={styles.h33}>
-      Get Base Currency {BASECOIN} <Image src="/maticcoin.png"  width={20} height={20} /> as incentive
+      Specialized Nft generates recurring {BASECOIN}<Image src="/maticcoin.png"  width={15} height={15} />  on each mint
       </div>
       </>
       )}
@@ -132,33 +137,35 @@ export default function Product(props) {
       </> )}
 
       <div className={styles.line}></div>
- 
-      <img className="small" src={product.image} alt={product.name} width={300} height={300} />
+      <div className={styles.brow}>
+        <span className={styles.lbcolumn}>
+        <img className="small" src={product.image} alt={product.name} width={150} height={150} />
+        </span>
+        <span className={styles.rbcolumn}>
+        <ul className={styles.ulstyle}>
+          <li>{product.name}</li>
+          <li>ERC-721</li>
+          <li>Polygon</li>
+          <li><a className={styles.invisbut}
+                         onClick={(e) => {
+                          e.preventDefault();
+                          copyToken();
+                        }
+                      }
+                    >{TOKENADDRESS.substr(0,10)}</a>
 
-      <h3>{product.name}</h3>
-      <h6>Specialized Nft generates recurring {BASECOIN} on each mint</h6>
-      
-      <div>{product.price} <sup>{BASECOIN}</sup></div>
-
-      <div>
-        <button className={styles.betbutton} onClick={() => onAdd(product)}>Add To Cart</button>
+          </li>
+          <li>
+          <Image src="/maticcoin.png"  width={15} height={15} /> {product.price} 
+          </li>
+        </ul>
+        </span>
       </div>
-{/* 
-      <span className={styles.detailsbut}>
-        <button >Details</button>
-      </span> */}
+ 
+      <div>
+        <button className={styles.betbutton} onClick={() => onAdd(product)}>Add Cart</button>
+      </div>
 
-
-      {/* <div className={styles.details}> */}
-      {/* <span className={styles.la}>Blockchain</span> 
-      <span className={styles.ra}>Binance Smart Chain</span>  */}
-      {/* </div> */}
-
-      {/* <div className={styles.details}> */}
-      {/* <span className={styles.la}>Token Standard</span> 
-      <span className={styles.ra}>ERC-721</span>  */}
-      {/* </div> */}
-      {/* </div> */}
       </span>
   );
 }

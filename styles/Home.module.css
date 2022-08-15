@@ -18,8 +18,18 @@
   align-items: center;
 }
 
+.ulstyle
+{
+  list-style: none;
+}
+
+.ulstyle li
+{
+  margin-top: 10px;
+}
+
 .h3 {
-  font-size: 30px;
+  font-size: 20px;
   margin-top: 15px;
   margin-bottom: 15px;
 }
@@ -69,6 +79,13 @@ margin-bottom:5px;
 
 .menulinef button:hover  { cursor: pointer; color:violet}
 
+.brow {
+  background-color: transparent;
+  border-radius: 8px;
+  box-shadow: 0 0px 8px 0 rgba(0, 0, 0, 0.2);
+  border-left: 1px solid #485461;
+  border-top: 1px solid #485461;
+}
 
 .line {
   background-color: #eaeaea;
@@ -270,6 +287,12 @@ button.remove:hover {border: 1px solid #EDEBEA;}
 }
 
 .brow:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.brow1:after {
   content: "";
   display: table;
   clear: both;
