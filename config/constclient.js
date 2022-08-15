@@ -1,4 +1,4 @@
-export const TOKENADDRESS = '0xE53A0879Ef65E5D144C5f4f902151486199392B5'; // Your NFT Contract Address - token ERC721a 
+export const TOKENADDRESS = '0xC27ba3a6d8AE2Ba1de1D7207Ed72bB54bDE5f904'; // Your NFT Contract Address - token ERC721a 
 export const CONTADDRESS = '0x32A75Ccb8F05446aCB5fd42DF3Bc11751eedB19F'; // Dstate Contract Address
 export const TXNURL = 'https://mumbai.polygonscan.com/tx/';
 export const RXSAMT = 1;
