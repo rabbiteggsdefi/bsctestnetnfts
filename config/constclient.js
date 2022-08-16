@@ -13,9 +13,9 @@ export const TOKENCT = 'https://mumbai.polygonscan.com/address/'.concat(TOKENADD
 export const BASEIMAGEPATH = '/polygontestnetnfts/';
 
 // Urls
-export const PAPERS = 'https://rabbiteggsdefi.github.io/guide/Rabbit_Eggs_Defi_Whitepaper.pdf';
-export const GUIDE = 'https://rabbiteggsdefi.github.io/guide/';
-export const TIPS = 'https://rabbiteggsdefi.github.io/guide/#tipstricks';
+export const PAPERS = 'https://rabbiteggsdefi.github.io/maticguide/Rabbit_Eggs_Defi_Whitepaper.pdf';
+export const GUIDE = 'https://rabbiteggsdefi.github.io/maticguide/';
+export const TIPS = 'https://rabbiteggsdefi.github.io/maticguide/#tipstricks';
 export const BSCTESTNET = 'https://mumbaifaucet.com/';
 
 // Social Media Links
